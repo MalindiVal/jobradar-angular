@@ -1,0 +1,10 @@
+@let o = offer();
+<article class="offer">
+  <div>
+    <strong>{{ o.title }}</strong>
+    <p>{{ o.company }} · {{ o.location }} · {{ o.source }}</p>
+    <small>{{ o.match_explanation }}</small>
+    <p><a [href]="o.source_url" target="_blank" rel="noreferrer">Voir l'annonce originale ↗</a></p>
+  </div>
+  <strong>{{ o.match_score }}/100</strong>
+</article>
