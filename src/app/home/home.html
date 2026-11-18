@@ -1,0 +1,8 @@
+<main>
+  <!-- onCollect={collect}  →  (collect)="collect()" -->
+  <app-header (collect)="collect()" />
+  <!-- offers={offers}  →  [offers]="offers()" (on lit le signal avec ()) -->
+  <app-stats [offers]="offers()" />
+  <!-- query={query} onQueryChange={setQuery}  →  [(query)]="query" (liaison bidirectionnelle sur le signal) -->
+  <app-offer-list [offers]="filtered()" [(query)]="query" [error]="error()" [loading]="loading()" />
+</main>
