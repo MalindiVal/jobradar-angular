@@ -1,0 +1,26 @@
+<section appCard>
+  <header>
+    <div>
+      <h2>Offres détectées</h2>
+      <small>Triées des plus récemment détectées aux plus anciennes</small>
+    </div>
+    <input [value]="query()" (input)="onInput($event)" placeholder="Rechercher une offre..." />
+  </header>
+
+  <!-- React : {error && <p>…</p>}  →  Angular : @if -->
+  @if (error()) {
+    <p role="alert">{{ error() }}</p>
+  }
+
+  <!-- React : ternaire imbriqué + offers.map(o => <OfferItem key={o.id} />)
+       Angular : @if / @else if / @else + @for avec track (équivalent de key) -->
+  @if (loading()) {
+    <p>Chargement...</p>
+  } @else {
+    @for (o of offers(); track o.id) {
+      <app-offer-item [offer]="o" />
+    } @empty {
+      <p>Aucune offre pour le moment. Lance une recherche de démonstration.</p>
+    }
+  }
+</section>
