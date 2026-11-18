@@ -1,4 +1,3 @@
-// Identique à la version Next.js : un type TypeScript n'a rien de spécifique au framework.
 export type Offer = {
   id: number;
   title: string;
