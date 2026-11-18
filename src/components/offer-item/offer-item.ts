@@ -1,5 +1,5 @@
 import { Component, input } from '@angular/core';
-import type { Offer } from '../../lib/types';
+import type { Offer } from '../../lib/types/offer';
 
 @Component({
   selector: 'app-offer-item',

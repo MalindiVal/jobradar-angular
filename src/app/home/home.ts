@@ -2,8 +2,8 @@ import { afterNextRender, Component, computed, inject, signal } from '@angular/c
 import { Header } from '../../components/header/header';
 import { OfferList } from '../../components/offer-list/offer-list';
 import { Stats } from '../../components/stats/stats';
-import { OfferService } from '../../lib/offer.service';
-import type { Offer } from '../../lib/types';
+import { OfferService } from '../../lib/services/offer.service';
+import type { Offer } from '../../lib/types/offer';
 
 // Équivalent de app/page.tsx (route "/"), déclarée dans app.routes.ts.
 @Component({

@@ -1,5 +1,5 @@
 import { Component, computed, input } from '@angular/core';
-import type { Offer } from '../../lib/types';
+import type { Offer } from '../../lib/types/offer';
 import { StatCard } from '../stat-card/stat-card';
 
 // React recalcule les filter() à chaque rendu.

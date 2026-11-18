@@ -1,5 +1,5 @@
 import { Component, input, model } from '@angular/core';
-import type { Offer } from '../../lib/types';
+import type { Offer } from '../../lib/types/offer';
 import { Card } from '../card/card';
 import { OfferItem } from '../offer-item/offer-item';
 
