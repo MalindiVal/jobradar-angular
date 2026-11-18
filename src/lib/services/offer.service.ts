@@ -10,6 +10,7 @@ import { Service } from './service';
 @Injectable({ providedIn: 'root' })
 export class OfferService {
   private readonly service = inject(Service);
+  private readonly offerParser : OfferParser;
 
   // HttpClient renvoie un Observable ; firstValueFrom le convertit en Promise
   // pour garder le même style async/await que la version React.
